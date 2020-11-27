@@ -1,0 +1,104 @@
+@import "partials/mixins";
+.manage_wallet {
+  margin-top: 10rem;
+  padding: 0 2.3125rem;
+  .balance_amount_block {
+    position: relative;
+    @include flex-center;
+    padding: 4rem 0;
+    flex-direction: column;
+
+    .balance_amount {
+      font-size: 5rem;
+      color: #ffe32c;
+      span {
+        position: relative;
+        top: -1.5rem;
+        font-size: 3rem;
+      }
+    }
+    .amount_in_wallet {
+      margin-top: 2rem;
+      font-size: 2.125rem;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: -1rem;
+      left: 3rem;
+      width: 2rem;
+      height: 2rem;
+      background: url("../public/img/Ellipse\ 59.svg") no-repeat center;
+      background-size: 100%;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1rem;
+      right: 4.375rem;
+      width: 2.23rem;
+      height: 2.02rem;
+      background: url("../public/img/Component\ 55\ –\ 1.svg") no-repeat center;
+      background-size: 100%;
+      transform: rotate(-30deg);
+    }
+  }
+  .pseudoCl {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 3.38rem;
+      width: 1.24375rem;
+      height: 1.24375rem;
+      background: url("../public/img/Component\ 56\ –\ 1.svg") no-repeat center;
+      background-size: 100%;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 1.25rem;
+      right: 3rem;
+      width: 2.375rem;
+      height: 2.375rem;
+      background: url("../public/img/Ellipse\ 60.svg") no-repeat center;
+      background-size: 100%;
+      transform: rotate(-30deg);
+    }
+  }
+  .manage_wallet_buttons {
+    width: 100%;
+    margin: 11.625rem 0 19.1875rem;
+    display: flex;
+    justify-content: space-between;
+
+    > * {
+      @include flex-center;
+      width: 47%;
+      height: 7.5rem;
+      color: #ffffff;
+      font-family: "lbet-mt";
+      font-size: 2.3125rem;
+      border-radius: 0.625rem;
+      cursor: pointer;
+    }
+    .manage_wallet_replenish_btn {
+      background-color: #43a047;
+    }
+    .manage_wallet_withdraw_btn {
+      background-color: #435fa0;
+    }
+  }
+  .wallet_close_btn {
+    @include flex-center;
+    margin: 0 auto;
+    padding: 2.375rem 2.93rem;
+    color: #ffffff;
+    font-size: 2.3125rem;
+    font-family: "lbet-mt";
+    border-radius: 0.625rem;
+    background-color: #bc0818;
+    cursor: pointer;
+  }
+}

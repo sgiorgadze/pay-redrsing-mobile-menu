@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Scss</title>
+    <link rel="stylesheet" href="bundle.min.css" />
+  </head>
+
+  <body>
+    <div class="pop_up_mobile_menu_wrapper">
+      <div class="pop_up_mobile_menu">
+        <div class="mobile_header">
+          <div class="mobile_header_left">
+            <div class="header_icon">
+              <img src="./img/Component 51 – 1.svg" alt="" />
+            </div>
+            <div class="header_title">ვერიფიკაციის გავლა</div>
+          </div>
+          <div class="close_btn">
+            <div class="close_btn_img">
+              <img src="./img/Component 29 – 1.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="open_verification_block">
+          <div class="open_verification_description">
+            <p>
+              გვერდიდან შეგიძლიათ შევალოთ ფოსტა მობილიურო ტეფონი ა გაქიტური
+              საცხოვრებელი მისამართი
+            </p>
+            <p>
+              სხვა მონაცმების სესაცვლელად საჭიროა გამოაგზანვოთ თქვენიო პირადობის
+              მოწმობის დასკანირებული ვერსია ჩენს საკოტაქტო ფოსტაზე
+            </p>
+          </div>
+          <h1>დოკუმენტის ტიპი</h1>
+          <div class="verif_document_block">
+            <button class="verif_iden active">პირადობით</button>
+            <button class="verif_passport">პასპორტით</button>
+          </div>
+          <form class="form bg_line open_verif">
+            <div class="form-group">
+              <label>საბუთის ნომერი</label>
+              <input type="text" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label>გამცემი ორგანო</label>
+              <input
+                type="text"
+                class="form-control"
+                value="იუსტიციის სამინისტრო"
+              />
+            </div>
+            <div class="form-group">
+              <label>გაცემის თარიღი</label>
+              <input type="text" class="form-control" value="19.12.2020" />
+              <div class="show_content reg">
+                <div class="show_content_icon">
+                  <img src="./img/Group 841.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>მოქმედების ვადა</label>
+              <input type="text" class="form-control" value="19.12.2022" />
+              <div class="show_content reg">
+                <div class="show_content_icon">
+                  <img src="./img/Group 841.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>სქესი</label>
+              <input type="text" class="form-control" value="მამრობითი" />
+            </div>
+            <h1>დოკუმენტის ტიპი</h1>
+            <h5>გთხოვთ ატვირთოთ არჩეული </br>პირადობის წინა მხარე</h5>
+             <div class="upload_doc">
+            <div class="doc_img">
+                <img src="./img/Component 331 – 1.svg" alt="">
+            </div>
+            <div class="upload_input_block">
+                <input type="file" class="custom-file-input" id="image" name="image">
+                <label class="custom-file-label">წინა მხარის ატვირთვა</label>
+            </div>            
+               </div>
+               <h5>გთხოვთ ატვირთოთ არჩეული </br>პირადობის უკანა მხარე</h5>
+             <div class="upload_doc back">
+            <div class="doc_img">
+                <img src="./img/Group 1283.svg" alt="">
+            </div>
+            <div class="upload_input_block">
+                <input type="file" class="custom-file-input" id="image" name="image">
+                <label class="custom-file-label">უკანა მხარის ატვირთვა</label>
+            </div>            
+               </div>               
+            <div class="form-check verif">       
+              <button type="submit" class="univ_btn">დამახსოვრება</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

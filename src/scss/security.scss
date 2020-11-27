@@ -1,0 +1,226 @@
+@import "partials/mixins";
+
+.sms_service {
+  display: flex;
+  flex-direction: column;
+  padding: 3.125rem 1rem 3.625rem 1rem;
+  .sms_service_title {
+    margin: 0 0 1.75rem 1.625rem;
+    font-size: 2rem;
+    color: #79829e;
+    text-transform: uppercase;
+  }
+  .activate_verification {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 7.8125rem;
+    padding-left: 1.6875rem;
+    border: 1px solid #4885ff;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    .activate_verification_text {
+      width: 29.5625rem;
+      color: #eeeeee;
+      font-size: 1.7rem;
+      line-height: 1.3;
+    }
+    .activate_verification_btn {
+      @include flex-center;
+      width: 17.625rem;
+      height: 100%;
+      font-size: 2rem;
+      color: #ffffff;
+      font-family: "lbet-mt";
+      background-color: #4885ff;
+      cursor: pointer;
+    }
+  }
+}
+.sms_service_switch_block {
+  position: relative;
+  width: 100%;
+  padding: 0 2.625rem;
+  z-index: 9;
+  .sms_service_switch_block_item {
+    margin-bottom: 6.35rem;
+    .sms_service_switch_block_content {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sms_service_switch_block_name {
+      font-size: 2.25rem;
+      width: 44%;
+    }
+    .sms_service_switch_block_info_icon {
+      .info_icon-img {
+        position: relative;
+        width: 3.2rem;
+        cursor: pointer;
+      }
+    }
+    .sms_service_switch_block_btn {
+      .toggle_btn {
+        width: 6.2768rem;
+        height: 3.45875rem;
+        padding: 0.625rem;
+        background-color: #494c60;
+        border-radius: 2.125rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .toggle_btn_green {
+          width: 2.59rem;
+          height: 2.59rem;
+          border-radius: 50%;
+          background-color: #3eb553;
+          cursor: pointer;
+        }
+      }
+    }
+    &:last-child {
+      .sms_service_switch_block_content {
+        margin-bottom: 9.85rem;
+      }
+    }
+    &.deactivated_service {
+      .toggle_btn {
+        justify-content: flex-start;
+        .toggle_btn_green {
+          background-color: #828c96;
+        }
+      }
+      .info_icon-img {
+        &:hover {
+          transition: all 1s;
+          &::before {
+            content: attr(title);
+            display: block;
+            width: 32.5rem;
+            white-space: normal;
+            position: absolute;
+            padding: 2rem 2rem;
+            top: -6.6rem;
+            left: -3.6875rem;
+            color: black;
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            background-color: #fff;
+            border-radius: 5rem;
+            line-height: 1.3;
+            transform: translate(-50%, -50%);
+            z-index: 22;
+          }
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 1.56rem;
+            height: 1.56rem;
+            background-color: #fff;
+            transform: rotate(134deg);
+            top: -3rem;
+            right: 1rem;
+            z-index: 23;
+          }
+        }
+      }
+    }
+  }
+  &.deactivated {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #2c2d34;
+      opacity: 0.7;
+      z-index: 10;
+    }
+  }
+}
+
+.verification_sms_confirm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .verification_form {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.verification_input {
+  width: 62%;
+  height: 6.375rem;
+  //  padding: 0 40px;
+  border-radius: 0.625rem;
+  background-color: #d8e2f5;
+  letter-spacing: 2rem;
+  font-size: 2.5rem;
+  text-indent: 34%;
+  color: #43485eed;
+  overflow: hidden;
+  &::placeholder {
+    width: 130px;
+    color: #43485eed;
+  }
+  &.mn-balance {
+    width: 100%;
+    margin: 3.125rem 0 0.44rem 0;
+  }
+}
+.resend {
+  display: flex;
+  margin-top: 2.6875rem;
+  align-items: center;
+  .resend_icon {
+    width: 1.71625rem;
+  }
+  .resend_link {
+    margin-left: 1.28rem;
+    color: #b4c3d5;
+    font-size: 1.5625rem;
+    text-decoration: underline;
+  }
+}
+.verification_confirm_btn {
+  @include flex-center;
+  width: 15.75rem;
+  height: 6.4375rem;
+  font-size: 2rem;
+  font-family: "lbet-mt";
+  color: #ffffff;
+  border-radius: 0.625rem;
+  background-color: #3eb553;
+  cursor: pointer;
+}
+
+/* Libary CSS */
+.shell {
+  position: relative;
+  line-height: 1;
+  span {
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    color: red;
+    pointer-events: none;
+    z-index: -1;
+    i {
+      /* any of these 3 will work */
+      color: transparent;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}

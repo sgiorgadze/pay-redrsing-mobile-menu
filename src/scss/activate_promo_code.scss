@@ -1,0 +1,33 @@
+@import "partials/mixins";
+.activate_promo_code {
+  padding: 7rem 3.8125rem 1rem;
+}
+.informative_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .promo_code_info_img {
+    width: 7.4375rem;
+  }
+  .informative_text_title,
+  .informative_text_desc {
+    color: #eeeeee;
+    font-size: 1.875rem;
+    text-align: center;
+    line-height: 1.3;
+  }
+  &.cash_st {
+    .informative_text_desc {
+      margin-bottom: 6.9875rem;
+    }
+    .informative_text_title {
+      margin-top: 0;
+    }
+  }
+  .informative_text_title {
+    margin: 3.35rem 0;
+  }
+  .informative_text_desc {
+    margin-bottom: 8.5rem;
+  }
+}

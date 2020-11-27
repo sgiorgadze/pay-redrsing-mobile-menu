@@ -1,0 +1,63 @@
+@import "partials/mixins";
+
+.replenish_info_section {
+  width: 100%;
+  margin: 1.875rem 0 3.09rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #33353d;
+  border-radius: 0.625rem;
+  > div {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3);
+    padding: 1.625rem;
+    justify-content: center;
+    align-items: center;
+    &.center_block {
+      border-right: 1px solid #2c2d34;
+      border-left: 1px solid #2c2d34;
+    }
+  }
+
+  .replenish_info_section_title {
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-size: 1.625rem;
+  }
+  .balance {
+    .balance_amount {
+      font-size: 3.125rem;
+      color: #ffe32c;
+      span {
+        position: relative;
+        top: -1.25rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .bet_market {
+    .bet_market_amount {
+      font-size: 3.125rem;
+      color: #53cfec;
+    }
+  }
+  .replenish_btn {
+    @include flex-center;
+    width: 15.6875rem;
+    height: 6rem;
+    background-color: #43a047;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    cursor: pointer;
+    .replenish_btn_img {
+      width: 2.23rem;
+    }
+    span {
+      margin-left: 1rem;
+      font-size: 2.3125rem;
+      font-family: "lbet-mt";
+      color: #ffffff;
+    }
+  }
+}

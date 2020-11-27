@@ -1,0 +1,66 @@
+@import "partials/mixins";
+.cash_status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 1.4375rem 1rem;
+  .cash_status_img {
+    text-align: center;
+    width: 6.848rem;
+  }
+  h1 {
+    margin: 2.725rem 0 13rem;
+    text-transform: uppercase;
+    color: #ffb668;
+    font-size: 2.25rem;
+  }
+  .cash_status_progress_line {
+    position: relative;
+    width: 100%;
+    height: 3.125rem;
+    background-color: #474951;
+    border-radius: 3rem;
+    .cash_status_checked-progress_line {
+      position: relative;
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      height: 100%;
+      background-color: #43a047;
+      border-radius: 3rem;
+      &:after {
+        content: attr(title);
+        position: absolute;
+        top: -3.4375rem;
+        font-size: 2.625rem;
+        right: var(--my-location-var);
+      }
+    }
+    &::after {
+      content: attr(data-startValue);
+      position: absolute;
+      bottom: -3.125rem;
+      left: 0.5rem;
+      text-transform: uppercase;
+      font-size: 1.875rem;
+    }
+    &::before {
+      content: attr(data-endValue);
+      position: absolute;
+      bottom: -3.125rem;
+      right: 1rem;
+      text-transform: uppercase;
+      font-size: 1.875rem;
+    }
+  }
+  .cash_status_withdraw_btn {
+    margin-top: 7rem;
+    padding: 2.05rem 2.96rem;
+    align-self: flex-end;
+    font-size: 2rem;
+    color: #ffffff;
+    font-family: "lbet-mt";
+    background: #8c8d7a;
+    border-radius: 3.25rem;
+  }
+}
